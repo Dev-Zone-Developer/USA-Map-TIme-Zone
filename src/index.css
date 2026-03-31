@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(2px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.2s ease-out;
+}
+
+body {
+  padding-top: 70px;
+  /* adjust to match header height on mobile */
+}
+
+@media (min-width: 768px) {
+  body {
+    padding-top: 75px;
+    /* match header height on desktop */
+  }
+}
+
+.cls-6 {
+  stroke: black;
+  stroke-width: 1;
+}
+
+@media print {
+  body *:not(.printable-map) {
+    visibility: hidden;
+  }
+
+  .printable-map {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+}
